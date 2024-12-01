@@ -9,7 +9,11 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  overflow: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -52,15 +56,14 @@ ol {
   flex-direction: row;
   align-items: flex-end;
   column-gap: 30px;
-  width: 1140px;
-  margin: 133px auto;
+  inline-size: 1140px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  height: 386px;
   margin-bottom: 16px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
@@ -82,21 +85,21 @@ ol {
 }
 
 .search-form__fieldset-title {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   font-family: inherit;
   font-weight: 400;
   font-size: inherit;
 }
 
 .search-form__textfield {
-  width: 225px;
   border: 1px solid #fff;
   border-right: none;
   border-left: none;
-  color: rgba(255 255 255 / 0.7);
+  color: #fff;
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
+  inline-size: 225px;
   appearance: none;
 }
 
@@ -207,8 +210,8 @@ ol {
 
 .content__list {
   position: relative;
-  max-height: 298px;
   overflow-y: auto;
+  block-size: 298px;
 }
 
 .content__list-item:not(:last-child) {
@@ -248,12 +251,12 @@ ol {
 .content__video-card {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.content__video-card {
-  display: grid;
-  grid-template-columns: 1fr auto;
+.content__video-card-description-container {
+  width: 100%;
 }
 
 .content__video-card-title {
@@ -267,10 +270,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
 }
 
 .more-button {
